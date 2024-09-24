@@ -27,4 +27,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
    return res.status(500).json({ status: 'error', message: 'Internal server error' })
 })
 
-app.listen(3333 || 5000)
+app.listen(process.env.PORT || 5000)
